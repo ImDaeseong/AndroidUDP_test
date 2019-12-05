@@ -50,8 +50,8 @@ void CUDPSendDlg::OnPaint()
 void CUDPSendDlg::OnTimer(UINT_PTR nIDEvent)
 {
 	if(nIDEvent == 1)
-	{
-        SendData();
+	{   
+		SendData();
 	}
 
 	CDialog::OnTimer(nIDEvent);
@@ -78,7 +78,7 @@ BOOL CUDPSendDlg::SendData()
 	setsockopt(m_socket,SOL_SOCKET,SO_SNDTIMEO,(char *)&nNetTimeout,sizeof(int));
 
 
-	//전송 내용
+	//send messsage
 	CString strSend = "test message test message test message test message test message";
 	char buf[1024] = {0};	
 	sprintf(buf, "%s", strSend);
@@ -87,15 +87,15 @@ BOOL CUDPSendDlg::SendData()
 	int nResult = sendto(m_socket, buf, sizeof(buf), 0, (LPSOCKADDR)&addr, sizeof(addr));  
 	if(nResult < 0)
     {
-		//전송 실패 
+		//send fail 
     }
     else if(nResult < strlen(buf))
     {
-		//전송중 
+		//sending 
 	}
     else
     {
-		//전송 완료 
+		//send complete 
     }
 	
     closesocket(m_socket);  
