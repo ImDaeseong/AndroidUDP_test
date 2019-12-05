@@ -83,22 +83,21 @@ BOOL CUDPSendDlg::SendData()
 	char buf[1024] = {0};	
 	sprintf(buf, "%s", strSend);
 
-
 	int nResult = sendto(m_socket, buf, sizeof(buf), 0, (LPSOCKADDR)&addr, sizeof(addr));  
 	if(nResult < 0)
-    {
+	{
 		//send fail 
-    }
-    else if(nResult < strlen(buf))
-    {
+	}
+	else if(nResult < strlen(buf))
+	{
 		//sending 
 	}
-    else
-    {
+	else
+	{
 		//send complete 
-    }
-	
-    closesocket(m_socket);  
+	}
 
-	return TRUE;	
+	closesocket(m_socket);  
+
+	return TRUE;
 }
