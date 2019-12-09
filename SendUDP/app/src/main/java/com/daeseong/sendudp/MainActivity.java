@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 try {
-
                     UdpMessage udpMessage = new UdpMessage("255.255.255.255", 20121, "test message test message test message test message test message");
                     udpMessage.execute();
 
