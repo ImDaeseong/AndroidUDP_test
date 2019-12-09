@@ -22,9 +22,10 @@ def Listen():
     while True:
         data, address = sock.recvfrom(1024)
         text = data.decode('ascii')
-        print(text)
+        # print(text)
         # print(address)
         # print('주소:{} 메시지:{!r}'.format(address, text))
+        sock.sendto(b'return test message', address)
 
 
 if __name__ == '__main__':

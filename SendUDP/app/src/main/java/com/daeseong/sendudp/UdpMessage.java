@@ -32,6 +32,7 @@ public class UdpMessage extends AsyncTask<Void, Void, Boolean> {
     }
 
     private boolean sendMessage() {
+
         try {
             DatagramSocket datagramSocket = new DatagramSocket();
             datagramSocket.setBroadcast(true);
@@ -49,5 +50,6 @@ public class UdpMessage extends AsyncTask<Void, Void, Boolean> {
         }
         return false;
     }
+
 }
 
