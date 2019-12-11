@@ -260,5 +260,9 @@
 		</Filter>
 	</Files>
 	<Globals>
+		<Global
+			Name="RESOURCE_FILE"
+			Value="UdpReceive.rc"
+		/>
 	</Globals>
 </VisualStudioProject>

@@ -1,4 +1,13 @@
 #pragma once
+#include "afxcmn.h"
+
+typedef struct _Game_info_Response_
+{
+	CString m_sType;
+	CString m_strPackageName;
+	int m_nSecond;
+
+}ST_GAME_INFO_RESPONSE, *LPST_GAME_INFO_RESPONSE;
 
 class CUdpReceiveDlg : public CDialog
 {
@@ -19,8 +28,19 @@ protected:
 	DECLARE_MESSAGE_MAP()
 
 private:
-	SOCKET m_socket; 
+	CListCtrl m_ListCtrl;
 
+
+	CPtrArray m_AryInfo;
+	void AddGameInfo(CString sType, CString strPackageName, int nSecond);
+	void RemoveGameInfo(CString strPackageName);
+	void RemoveAllGameInfo();
+	void SendGameEnddate();
+	BOOL GetSplitParams(CString strInput, CStringArray& strResultArr);
+	void InsertGameInfo(BOOL bFind, CString sType, CString strPackageName, int nSecond);
+
+	SOCKET m_socket; 
 	BOOL initSocket();
 	BOOL SendMessage();	
+	
 };
