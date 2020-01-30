@@ -35,7 +35,7 @@ private:
 	void AddGameInfo(CString sType, CString strPackageName, int nSecond);
 	void RemoveGameInfo(CString strPackageName);
 	void RemoveAllGameInfo();
-	void SendGameEnddate();
+	void RemoveEnddate();
 	BOOL GetSplitParams(CString strInput, CStringArray& strResultArr);
 	void InsertGameInfo(BOOL bFind, CString sType, CString strPackageName, int nSecond);
 

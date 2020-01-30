@@ -41,7 +41,7 @@
 #include <afxsock.h>            // MFC socket extensions
 
 
-#define DEFAULT_PORT  20121 
+#define DEFAULT_PORT  80 
 
 #define RECEIVE_SOCK  WM_USER+1
 
