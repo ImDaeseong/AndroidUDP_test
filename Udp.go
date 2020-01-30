@@ -10,7 +10,7 @@ import (
 
 func SendData(data string) {
 
-	addr, err := net.ResolveUDPAddr("udp", "255.255.255.255:20121")
+	addr, err := net.ResolveUDPAddr("udp", "255.255.255.255:80")
 	if err != nil {
 		log.Panic(err)
 	}
@@ -32,7 +32,7 @@ func SendData(data string) {
 
 func ReceiveData() {
 
-	addr, err := net.ResolveUDPAddr("udp", ":20121")
+	addr, err := net.ResolveUDPAddr("udp", ":80")
 	if err != nil {
 		log.Panic(err)
 	}

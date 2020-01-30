@@ -8,7 +8,7 @@ def UdpSend():
 
     i = 0
     while True:
-        sock.sendto(b'(%d) test message' % i, ('255.255.255.255', 20121))
+        sock.sendto(b'(%d) test message' % i, ('255.255.255.255', 80))
         i += 1
         time.sleep(1)
 
