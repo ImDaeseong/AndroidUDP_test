@@ -6,6 +6,7 @@ typedef struct _Game_info_Response_
 	CString m_sType;
 	CString m_strPackageName;
 	int m_nSecond;
+	COleDateTime m_strCurrentTime;
 
 }ST_GAME_INFO_RESPONSE, *LPST_GAME_INFO_RESPONSE;
 
@@ -37,7 +38,7 @@ private:
 	void RemoveAllGameInfo();
 	void RemoveEnddate();
 	BOOL GetSplitParams(CString strInput, CStringArray& strResultArr);
-	void InsertGameInfo(BOOL bFind, CString sType, CString strPackageName, int nSecond);
+	void InsertGameInfo(BOOL bFind, CString sType, CString strPackageName, int nSecond, COleDateTime tNow);
 
 	SOCKET m_socket; 
 	BOOL initSocket();
