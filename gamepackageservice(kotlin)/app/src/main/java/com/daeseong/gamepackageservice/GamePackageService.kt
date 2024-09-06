@@ -20,7 +20,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.HashMap
 
-
 class GamePackageService : Service() {
 
     private val tag = GamePackageService::class.java.simpleName

@@ -6,7 +6,6 @@ import java.net.DatagramPacket
 import java.net.DatagramSocket
 import java.net.InetAddress
 
-
 class UdpMessage(private val serverIP: String, private val port: Int, private val sMsg: String) : AsyncTask<Void?, Void?, Boolean>() {
 
     private val tag = javaClass.simpleName

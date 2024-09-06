@@ -2,7 +2,6 @@ package com.daeseong.gamepackageservice;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.content.Intent;

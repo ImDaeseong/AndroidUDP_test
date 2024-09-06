@@ -4,7 +4,6 @@ import android.os.AsyncTask
 import android.util.Log
 import org.json.JSONArray
 
-
 class DownloadJson : AsyncTask<Void?, Void?, String>() {
 
     private val tag = DownloadJson::class.java.simpleName
